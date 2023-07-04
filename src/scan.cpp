@@ -117,8 +117,12 @@ bool scanProcess()
     else
     {
         lcdDisplay("Merchant Login Failed", "");
+    }
+    if (httpCode != 200)
+    {
         playBuzz(ERROR);
     }
+
     tag = "";
 
     irqPrev = irqCurr;

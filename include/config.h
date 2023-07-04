@@ -21,7 +21,7 @@ const int NOTIFY_TIME = 10000;
 const int DIGIT_ZERO_ASCII_VALUE = 48;
 
 // Server details
-const char hostname[] = "rfid.goswivt.com";
+const char hostname[] = "rfid.goswivt.com/api/v1";
 const int port = 443;
 
 // JSON configuration file
