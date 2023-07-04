@@ -13,6 +13,5 @@
 
 // Layers stack
 extern TinyGsm modem;
-extern TinyGsmClient client;
 
 #endif

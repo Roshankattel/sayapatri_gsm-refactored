@@ -1,5 +1,10 @@
 #include "httpReq.h"
 #include "config.h"
+#include "ArduinoJson.h"
+
+TinyGsmClient gsm_transpor_layer(modem);
+SSLClient secure_presentation_layer(&gsm_transpor_layer);
+HttpClient http = HttpClient(secure_presentation_layer, hostname, port);
 
 String sendHttpPostRequest(const String endpoint, const String httpRequestData, const String token = "")
 {
@@ -24,8 +29,6 @@ String sendHttpPostRequest(const String endpoint, const String httpRequestData, 
     http.print(httpRequestData);
     http.endRequest();
     httpCode = http.responseStatusCode();
-    debug("Status code: ");
-    debugln(httpCode);
     payload = http.responseBody();
     http.stop();
 
@@ -54,7 +57,7 @@ String merchantLogin()
 
     serializeJson(doc, httpRequestData);
 
-    String response = sendHttpPostRequest("auth/login", httpRequestData);
+    String response = sendHttpPostRequest("/api/v1/auth/login", httpRequestData);
     if (response.isEmpty())
     {
         debugln("\nFailed! The response is empty");
@@ -82,7 +85,7 @@ String transactionRequest(const String accessToken, const String tagData)
 
     serializeJson(doc, httpRequestData);
 
-    String response = sendHttpPostRequest("transaction/add", httpRequestData, accessToken);
+    String response = sendHttpPostRequest("/api/v1/transaction/add", httpRequestData, accessToken);
 
     if (response.isEmpty())
     {

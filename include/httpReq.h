@@ -5,8 +5,6 @@
 #include "psram.h"
 #include "gsmSetup.h"
 
-extern HttpClient http;
-
 extern uint8_t processState;
 extern uint32_t amount;
 extern int httpCode;

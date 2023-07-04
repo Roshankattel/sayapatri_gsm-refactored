@@ -64,8 +64,4 @@ String MERCHANT_PASSWORD = "Hello123@";
 
 // Layers stack
 TinyGsm modem(SerialAT);
-TinyGsmClient gsm_transpor_layer(modem);
-SSLClient sslClient(&gsm_transpor_layer);
-HttpClient http = HttpClient(sslClient, hostname, port);
-
 #endif

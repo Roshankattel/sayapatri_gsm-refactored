@@ -22,10 +22,12 @@ void notifyProcess()
     {
         httpCode = 0;
         lcdDisplay("User Unknown or", "Insufficient Balance");
+        playBuzz(ERROR);
     }
     else if (httpCode != 0)
     {
         httpCode = 0;
         lcdDisplay("Error in Transaction", "");
+        playBuzz(ERROR);
     }
 }
