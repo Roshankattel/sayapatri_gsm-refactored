@@ -15,14 +15,14 @@ bool welcomeProcess()
         *num = int(pressedKey) - 48;
         if (*num == 1 || *num == 2)
         {
-            if (*num = 1)
+            if (*num == 1)
             {
                 rechargeRequest = true;
                 debugln("\nPlease Enter RECHARGE Amount\n");
             }
             else
             {
-                rechargeRequest = true;
+                rechargeRequest = false;
                 debugln("\nPlease Enter PAY Amount\n");
             }
             free(num);
