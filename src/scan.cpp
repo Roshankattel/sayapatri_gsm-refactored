@@ -74,9 +74,6 @@ bool scanProcess()
     clearScreen();
     vTaskResume(display_handle);
 
-    // clearText();
-    // writeString("P R O C E S S I N G ", 160, 180);
-
     String accessToken = merchantLogin();
 
     if (httpCode != 0)
@@ -90,11 +87,7 @@ bool scanProcess()
     {
         httpCode = 0;
         userName = transactionRequest(accessToken, tag);
-
-        if (userName != "")
-        {
-            return 1;
-        }
+        return 1;
     }
     else if (httpCode == 404)
     {

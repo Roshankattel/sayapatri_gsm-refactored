@@ -19,7 +19,7 @@ void notifyTimer(const bool upperBar)
 void lcdDisplay(const char *errMsg1, const char *errMsg2)
 {
     clearLCD();
-    if (*errMsg2 != '\0')
+    if (*errMsg2 == '\0')
     {
         writeString(errMsg1, 160, 180);
     }
