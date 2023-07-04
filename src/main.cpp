@@ -98,23 +98,27 @@ void setup()
   /*Check if SIM or Network available ?*/
   ttgoGsmSetup();
 
-  if (display_handle != NULL)
-  {
-    vTaskSuspend(display_handle);
-  }
-
-  homePage();
-
-  lcdDisplay("Connecting to Network..", "");
-
   /*Display Network availablity*/
   if (connectGPRS())
   {
+    if (display_handle != NULL)
+    {
+      vTaskSuspend(display_handle);
+    }
+
+    homePage();
     gsmDisplay(true);
     welcomePage(false);
   }
   else
   {
+    if (display_handle != NULL)
+    {
+      vTaskSuspend(display_handle);
+    }
+
+    homePage();
+
     debugln("Network Unavilable");
     gsmDisplay(false);
     lcdDisplay("Network Unavailable", "");
@@ -152,7 +156,7 @@ void loop()
     break;
   case NOTIFY:
     notifyProcess();
-    notifyTimer(true);
+    notifyTimer(false);
     break;
   }
 }

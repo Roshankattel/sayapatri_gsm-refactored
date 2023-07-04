@@ -12,8 +12,6 @@ extern int irqPrev;
 
 extern Adafruit_PN532 nfc;
 
-extern TaskHandle_t display_handle;
-
 bool scanProcess();
 void startListeningToNFC();
 

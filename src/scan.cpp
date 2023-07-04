@@ -71,20 +71,11 @@ bool scanProcess()
         return false;
     }
 
-    clearScreen();
-    vTaskResume(display_handle);
-
     String accessToken = merchantLogin();
-
-    if (httpCode != 0)
-    {
-        vTaskSuspend(display_handle);
-        homePage();
-        gsmDisplay(modem.isGprsConnected());
-    }
 
     if (httpCode == 200)
     {
+        lcdDisplay("P R O C E S S I N G", "");
         httpCode = 0;
         userName = transactionRequest(accessToken, tag);
         return 1;
