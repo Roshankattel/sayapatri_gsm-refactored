@@ -103,7 +103,8 @@ void setup()
   {
     if (display_handle != NULL)
     {
-      vTaskSuspend(display_handle);
+      // vTaskSuspend(display_handle);
+      vTaskDelete(display_handle);
     }
 
     homePage();
@@ -114,7 +115,8 @@ void setup()
   {
     if (display_handle != NULL)
     {
-      vTaskSuspend(display_handle);
+      // vTaskSuspend(display_handle);
+      vTaskDelete(display_handle);
     }
 
     homePage();

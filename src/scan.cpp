@@ -44,6 +44,19 @@ String handleCardDetected()
 
 bool scanProcess()
 {
+
+#if TEST == 1
+    debugln("Running Test Case");
+    lcdDisplay("Running Test Case!", "");
+    const String accessToken = merchantLogin();
+    if (accessToken != "")
+    {
+        const String tag = "ff3e3a07fee14c0562c6dba74ae7a483a8ea5a7d80ffadba5b5116971d0af47d";
+        userName = transactionRequest(accessToken, tag);
+    }
+
+    return 1;
+#else
     if (buzzMode == ERROR)
     {
         notifyTimer(true);
@@ -111,4 +124,5 @@ bool scanProcess()
 
     irqPrev = irqCurr;
     return false;
+#endif
 }

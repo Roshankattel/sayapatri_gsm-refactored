@@ -5,6 +5,8 @@
 
 #define DEBUG 1
 
+#define TEST 0 // Enable this to test the flow with dummy data
+
 #if DEBUG == 1
 #define debug(x) Serial.print(x)
 #define debugln(x) Serial.println(x)
