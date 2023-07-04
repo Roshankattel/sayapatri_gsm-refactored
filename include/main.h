@@ -4,13 +4,11 @@
 #include <Wire.h>
 
 #include "config.h"
-#include "displayFunction.h"
 #include "utils.h"
 #include "buzz.h"
 #include "welcome.h"
 #include "amount.h"
 #include "scan.h"
-#include "gsmSetup.h"
 #include "notify.h"
 
 const byte ROWS = 4;

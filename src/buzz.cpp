@@ -1,6 +1,6 @@
 #include "buzz.h"
 
-void playBuzz(uint8_t mode)
+void playBuzz(const uint8_t mode)
 {
     buzzMode = mode;
     if (buzzStatus)
