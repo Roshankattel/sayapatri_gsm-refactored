@@ -158,8 +158,8 @@ void welcomePage(bool temp)
     clearText();
 
     tft.drawCentreString("Please enter:", 160, 130, GFXFF);
-    tft.drawCentreString(" 1. for Recharge ", 160, 160, GFXFF);
-    tft.drawCentreString(" 2. for Payment  ", 160, 190, GFXFF);
+    tft.drawCentreString(" 1.Recharge ", 160, 160, GFXFF);
+    tft.drawCentreString(" 2.Payment  ", 160, 190, GFXFF);
 }
 
 void amountPage(bool rechargeReq)
