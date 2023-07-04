@@ -3,6 +3,8 @@
 
 #include <Arduino.h>
 
+#define DISABLE_ALL_LIBRARY_WARNINGS
+
 #define DEBUG 1
 
 #define TEST 0 // Enable this to test the flow with dummy data
