@@ -6,10 +6,9 @@ void notifyProcess()
 {
     if (httpCode == 200)
     {
-        httpCode = 0;
-        userName.toUpperCase();
         clearLCD();
 
+        userName.toUpperCase();
         String prompt = rechargeRequest ? "RECHARGE" : "PAYMENT";
 
         writeString("Dear " + userName + ", your", 160, 130);
@@ -20,14 +19,13 @@ void notifyProcess()
     }
     else if (httpCode == 404)
     {
-        httpCode = 0;
         lcdDisplay("User Unknown or", "Insufficient Balance");
         playBuzz(ERROR);
     }
     else if (httpCode != 0)
     {
-        httpCode = 0;
         lcdDisplay("Error in Transaction", "");
         playBuzz(ERROR);
     }
+    httpCode = 0;
 }
