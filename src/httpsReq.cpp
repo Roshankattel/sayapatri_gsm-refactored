@@ -16,6 +16,7 @@ String sendHttpPostRequest(const String endpoint, const String httpRequestData, 
     debugln("\nPOST REQUEST DATA:");
     debugln(httpRequestData);
 
+    http.setTimeout(5000); // Set timeout to 5 seconds
     http.beginRequest();
     http.post(endpoint);
 
