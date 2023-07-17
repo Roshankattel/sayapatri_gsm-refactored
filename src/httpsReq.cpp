@@ -46,7 +46,7 @@ String sendHttpPostRequest(const String endpoint, const String httpRequestData, 
     return payload;
 }
 
-String merchantLogin()
+String merchantLogin(void)
 {
     String httpRequestData;
     httpRequestData.reserve(1024);

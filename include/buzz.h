@@ -11,6 +11,6 @@ extern uint8_t buzzMode;
 extern unsigned long turnOnTime;
 
 void playBuzz(const uint8_t mode);
-void checkBuzzerStatus();
+void checkBuzzerStatus(void);
 
 #endif

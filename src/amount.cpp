@@ -4,7 +4,7 @@
 
 uint32_t sum = 0;
 
-bool amountProcess()
+bool amountProcess(void)
 {
     char pressedKey = kpd.getKey();
     if (pressedKey)

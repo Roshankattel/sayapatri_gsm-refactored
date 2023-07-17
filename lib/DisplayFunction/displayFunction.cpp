@@ -10,14 +10,14 @@ int ANIMATION_HEIGHT = 100;
 int16_t xpos;
 int16_t ypos;
 
-void tftInit()
+void tftInit(void)
 {
     tft.init();
     tft.setRotation(1);
     startScreen();
 }
 
-void clearScreen()
+void clearScreen(void)
 {
     tft.setSwapBytes(true);
     tft.fillScreen(TFT_WHITE);
@@ -32,19 +32,19 @@ void pngDraw(PNGDRAW *pDraw)
     tft.pushImage(xpos, ypos + pDraw->y, pDraw->iWidth, 1, lineBuffer);
 }
 
-void showPair()
+void showPair(void)
 {
     showImage(PAIR_X, PAIR_Y, (uint8_t *)diamond, sizeof(diamond));
     showImage(PAIR_X + 16, PAIR_Y, (uint8_t *)diamond, sizeof(diamond));
 }
 
-void clearPair()
+void clearPair(void)
 {
     tft.fillRect(PAIR_X, PAIR_Y, 4, 4, TFT_WHITE);
     tft.fillRect(PAIR_X + 16, PAIR_Y, 4, 4, TFT_WHITE);
 }
 
-void clearText()
+void clearText(void)
 {
     tft.fillRect(0, 130, 320, 100, TFT_WHITE);
 }

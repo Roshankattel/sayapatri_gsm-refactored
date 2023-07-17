@@ -3,7 +3,7 @@
 #include "utils.h"
 #include "gsmSetup.h"
 
-void startListeningToNFC()
+void startListeningToNFC(void)
 {
     // Reset our IRQ indicators
     irqPrev = irqCurr = HIGH;
@@ -12,7 +12,7 @@ void startListeningToNFC()
     nfc.startPassiveTargetIDDetection(PN532_MIFARE_ISO14443A);
 }
 
-String handleCardDetected()
+String handleCardDetected(void)
 {
     uint8_t success = false;
     uint8_t uid[] = {0, 0, 0, 0, 0, 0, 0}; // Buffer to store the returned UID
@@ -42,7 +42,7 @@ String handleCardDetected()
     return ("");
 }
 
-bool scanProcess()
+bool scanProcess(void)
 {
 
 #if TEST == 1

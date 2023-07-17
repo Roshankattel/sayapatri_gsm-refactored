@@ -1,7 +1,7 @@
 #include "welcome.h"
 #include "config.h"
 
-bool welcomeProcess()
+bool welcomeProcess(void)
 {
     /*Input From Keypad*/
     char pressedKey = kpd.getKey();

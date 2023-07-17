@@ -1,11 +1,11 @@
 #include <main.h>
 
 /*Private Function Prototypes*/
-void ttgoGsmSetup();
-void startListeningToNFC();
-String handleCardDetected();
-bool connectGPRS();
-bool initializeModem();
+void ttgoGsmSetup(void);
+void startListeningToNFC(void);
+String handleCardDetected(void);
+bool connectGPRS(void);
+bool initializeModem(void);
 
 void processDisplay(void *)
 {
@@ -16,7 +16,7 @@ void processDisplay(void *)
   }
 }
 
-bool connectGPRS()
+bool connectGPRS(void)
 {
   bool success = false;
   const int MAX_CONNECTION_ATTEMPTS = 3;
@@ -163,7 +163,7 @@ void loop()
   }
 }
 
-void ttgoGsmSetup()
+void ttgoGsmSetup(void)
 {
   pinMode(MODEM_PWRKEY, OUTPUT);
   pinMode(MODEM_POWER_ON, OUTPUT);
@@ -192,7 +192,7 @@ void ttgoGsmSetup()
   }
 }
 
-bool initializeModem()
+bool initializeModem(void)
 {
 
   if (!modem.restart())

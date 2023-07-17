@@ -7,6 +7,6 @@ extern int httpCode;
 extern String userName;
 extern uint32_t amount;
 
-void notifyProcess();
+void notifyProcess(void);
 
 #endif

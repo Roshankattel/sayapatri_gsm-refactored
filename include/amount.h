@@ -6,6 +6,6 @@
 
 extern Keypad kpd;
 extern uint32_t amount;
-bool amountProcess();
+bool amountProcess(void);
 
 #endif

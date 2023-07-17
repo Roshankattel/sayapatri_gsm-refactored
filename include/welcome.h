@@ -7,6 +7,6 @@
 extern bool rechargeRequest; // for recharge and payment
 extern Keypad kpd;
 
-bool welcomeProcess();
+bool welcomeProcess(void);
 
 #endif

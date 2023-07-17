@@ -14,6 +14,6 @@ extern String userName;
 extern String MERCHANT_EMAIL;
 extern String MERCHANT_PASSWORD;
 
-String merchantLogin();
+String merchantLogin(void);
 String transactionRequest(const String accessToken, const String tagData);
 #endif

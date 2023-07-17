@@ -32,17 +32,17 @@
 #define SAYAPATRI_X 52
 #define SAYAPATRI_Y 35
 
-void tftInit();
+void tftInit(void);
 void pngDraw(PNGDRAW *pDraw);
-void clearText();
-void clearLCD();
-void clearScreen();
+void clearText(void);
+void clearLCD(void);
+void clearScreen(void);
 void showImage(int x, int y, uint8_t *image, int size);
-void chargingDisplay();
-void showPair();
-void clearPair();
-void homePage();
-void startScreen();
+void chargingDisplay(void);
+void showPair(void);
+void clearPair(void);
+void homePage(void);
+void startScreen(void);
 void welcomePage(bool temp);
 void showProcessing(void);
 void amountPage(bool rechargeReq);
