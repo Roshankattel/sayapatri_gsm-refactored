@@ -2,8 +2,6 @@
 
 /*Private Function Prototypes*/
 void ttgoGsmSetup(void);
-void startListeningToNFC(void);
-String handleCardDetected(void);
 bool connectGPRS(void);
 bool initializeModem(void);
 
